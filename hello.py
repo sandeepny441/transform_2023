@@ -12,3 +12,16 @@ for folder_name in os.listdir(master_folder_path):
 
         # Create and immediately close the file
         open(file_path, 'w').close()
+
+
+#match 
+import re
+print(re.match('a', 'abc'))  # Matches
+print(re.match('a', 'bac'))  # Does not match
+
+
+# findall
+import re
+print(re.findall('a', 'abcabc'))  # Returns ['a', 'a']
+
+
