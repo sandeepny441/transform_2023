@@ -1,0 +1,99 @@
+Sample
+
+Population
+
+Mean, Mode, Median
+
+Measures of Dispersion
+
+Variance
+
+Standard Deviation
+
+Population Mean
+
+Sample Mean
+
+Normal Distribution / Gaussian distribution
+
+Probability Distributions (e.g., Binomial, Poisson)
+
+Skewness
+
+Kurtosis
+
+Z-Scores
+
+Random Variables
+
+Covariance
+
+Correlation Coefficient
+
+Probability Density Function
+
+Cumulative Distribution Function
+
+Quantiles and Percentiles
+
+Boxplot
+
+Outliers
+
+Central Limit Theorem
+
+Sampling Distribution
+
+Confidence Intervals
+
+Null and Alternative Hypotheses
+
+Hypothesis Testing
+
+Type 1 Error
+
+Type 2 Error 
+
+True Positive False Positive
+
+True Negative False Negative
+
+Statistical Power
+
+T-tests (Independent and Dependent)
+
+Chi-square test
+
+F-test
+
+P-value
+
+ANOVA (Analysis of Variance)
+
+Parametric and Non-parametric Tests
+
+Factor Analysis
+
+Principal Component Analysis (PCA)
+
+Power of a Test
+
+Data Normalization
+
+Data Standardization 
+
+Data Transformation
+
+Maximum Likelihood Estimation
+
+Time Series Analysis
+
+Regression Analysis (Linear and Non-linear)
+
+Frequentist Statistics
+
+Bayes Theorem
+
+Conditional Probability 
+
+Types of sampling
