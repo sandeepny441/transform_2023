@@ -28,3 +28,42 @@ lsa_matrix = lsa_model.transform(count_matrix)
 
 # Print the LSA matrix
 print(lsa_matrix)
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import TruncatedSVD
+
+# Sample data
+documents = ["The car is driven on the road",
+             "The dog is running in the park",
+             "The car is parked in the park",
+             "A dog is in the car"]
+
+# Create a TfidfVectorizer object
+vectorizer = TfidfVectorizer()
+
+# Fit and transform the documents
+X = vectorizer.fit_transform(documents)
+
+# Create a TruncatedSVD object
+lsa = TruncatedSVD(n_components=2)
+
+# Fit and transform the tf-idf matrix
+lsa.fit_transform(X)
+
+# Print the topics
+terms = vectorizer.get_feature_names_out()
+for i, comp in enumerate(lsa.components_):
+    termsInComp = zip(terms, comp)
+    sortedTerms = sorted(termsInComp, key=lambda x: x[1], reverse=True) [:10]
+    print("Topic %d:" % i)
+    for term in sortedTerms:
+        print(term[0])
+    print(" ")
+
+
+
+
+
+
+
