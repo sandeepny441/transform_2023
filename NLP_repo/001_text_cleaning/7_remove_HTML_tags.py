@@ -12,7 +12,6 @@ processed_text = soup.get_text()
 # Print the processed text
 print(processed_text)
 
-
 print(300)
 
 
