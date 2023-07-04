@@ -28,3 +28,4 @@ git
 ssh
 scp
 curl
+top

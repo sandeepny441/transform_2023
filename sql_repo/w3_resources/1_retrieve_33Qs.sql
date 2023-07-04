@@ -93,5 +93,28 @@ OR
 (year = 1971 and subject = 'Economics')
 
 --20 
+select year, subject, winner, country,  category
+from nobel_win
+where year=1970
+and 
+where subject not in ('Physiology', 'Economics')
+
+--21
+select  year, subject, winner, country,  categoryf
+from nobel_win
+where (year < 1970 and subject = 'Physiology')
+UNION 
+select  year, subject, winner, country,  categoryf
+from nobel_win
+where (year >= 1971 and subject = 'Peace')
+
+--22
+select  year, subject, winner, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,  categoryf
+from nobel_win
+where (year < 1970 and subject = 'Physiology')
+UNION 
+select  year, subject, winner, country,  categoryf
+from nobel_win
+where (year >= 1971 and subject = 'Peace')
 
 
