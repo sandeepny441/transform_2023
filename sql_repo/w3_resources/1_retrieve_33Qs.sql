@@ -118,3 +118,19 @@ from nobel_win
 where (year >= 1971 and subject = 'Peace')
 
 
+--3
+
+SELECT 
+CASE 
+WHEN AGE < 30 THEN 'young'
+WHEN AGE > 30 AND AGE < 50 THEM 'MIDDLE AGED'
+ELSE 'OLD'
+END AS AGE_CATEGORY, 
+AVE(AGE)
+FROM PEOPLE
+GROUP BY AGE_CATEGORY
+
+
+SELECT NAME, IF(IF AGE < 30, 'young', 'OLD') AS AGE_CATEGORY FROM PEOPLE
+
+
