@@ -48,6 +48,70 @@ WHERE NAME LIKE '%n'
 SELECT * FROM SALESMAN
 WHERE NAME LIKE 'N__I%'
 
+--12
+SELECT *
+FROM testtable
+WHERE col1 LIKE '%/_%' ESCAPE '/';
+
+SELECT *
+FROM testtable
+WHERE col1 LIKE '%/%%' ESCAPE '%';
+
+--13
+SELECT *
+FROM testtable
+WHERE col1 NOT LIKE '%/_%' ESCAPE '/';
+
+--14
+SELECT *
+FROM testtable
+WHERE col1 LIKE '%//%' ESCAPE '/';
+
+--15
+SELECT *
+FROM testtable
+WHERE col1 NOT LIKE '%//%' ESCAPE '/';
+
+--16 
+SELECT *
+FROM testtable
+WHERE col1 LIKE '%/_/%' ESCAPE '/';
+
+--17
+SELECT *
+FROM testtable
+WHERE col1 NOT LIKE '%/_/%' ESCAPE '/';
+
+--18
+SELECT *
+FROM testtable
+WHERE col1  LIKE '/%' ESCAPE '/';
+
+--19
+SELECT *
+FROM testtable
+WHERE col1 NOT LIKE '/%' ESCAPE '/';
+
+--20
+SELECT * FROM CUSTOMER
+WHERE GRADE IS NULL 
+
+--21
+SELECT * FROM CUSTOMER
+WHERE GRADE IS NOT NULL 
+
+--22
+SELECT * FROM EMP_DETAILS
+WHERE EMP_LNAME LIKE 'D%'
+
+--23
+SELECT * FROM CUSTOMER
+WHERE GRADE IS NULL 
+
+
+
+
+
 
 
 
