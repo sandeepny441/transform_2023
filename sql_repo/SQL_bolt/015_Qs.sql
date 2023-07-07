@@ -1,0 +1,5 @@
+DELETE FROM MOVIES 
+WHERE YEAR < 2005
+
+DELETE FROM MOVIES 
+WHERE Director = 'Andrew Stanton'

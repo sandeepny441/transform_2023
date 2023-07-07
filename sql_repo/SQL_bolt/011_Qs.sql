@@ -1,0 +1,31 @@
+SELECT Cout(NAME)
+FROM   employees
+WHERE  role = 'ARTIST' 
+
+--SAME AS ABOVE
+
+SELECT role,
+       Count(*) AS Number_of_artists
+FROM   employees
+WHERE  role = "artist"; 
+
+SELECT role,
+       Count(*)
+FROM   employees
+GROUP  BY role 
+
+
+SELECT ROLE, SUM(YEARS_EMPLOYED) AS TOTAL_YEARS_EMPLEOYED 
+FROM EMPLOYEES
+GROUP BY ROLE
+HAVING  ROLE = 'ENGINEER'
+
+
+SELECT ROLE, SUM(YEARS_EMPLOYED) AS TOTAL_YEARS_EMPLEOYED 
+FROM EMPLOYEES
+GROUP BY ROLE
+WHERE  ROLE = 'ENGINEER'
+
+
+
+
