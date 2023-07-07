@@ -109,7 +109,7 @@ from nobel_win
 where (year >= 1971 and subject = 'Peace')
 
 --22
-select  year, subject, winner, xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,  categoryf
+select  year, subject, winner,  category
 from nobel_win
 where (year < 1970 and subject = 'Physiology')
 UNION 
@@ -118,19 +118,59 @@ from nobel_win
 where (year >= 1971 and subject = 'Peace')
 
 
---3
+--23 
+select year, subject, winner, country,  category
+from nobel_win
+where SUBJECT not like 'P%'
+order by year desc 
 
-SELECT 
+--24 
+SELECT * FROM NOBLE_WIN
+WHERE YEAR = 1970
+ORDER BY 
 CASE 
-WHEN AGE < 30 THEN 'young'
-WHEN AGE > 30 AND AGE < 50 THEM 'MIDDLE AGED'
-ELSE 'OLD'
-END AS AGE_CATEGORY, 
-AVE(AGE)
-FROM PEOPLE
-GROUP BY AGE_CATEGORY
+  WHEN SUBJECT IN ('Economics', 'Chemistry') then 1 
+  esle 0 
+END 
+  -- asc
+  -- asc, subject
+  asc, subject, winner 
+  -- osrt by multiple columns
 
+--25 
+SELECT pro_id, pro_name, pro_price, pro_com FROM item_mast
+WHERE pro_price BETWEEN 200 AND 600
 
-SELECT NAME, IF(IF AGE < 30, 'young', 'OLD') AS AGE_CATEGORY FROM PEOPLE
+--26 
+SELECT AVG(PRO_PRICE) FROM ITEM_mast
+WHERE PRO_COM = 16
 
+--27
+SELECT PRO_NAME AS 'ITEM_NAME', PRO_PRICE AS 'Price in Rs'
+FROM ITEM_mast
+
+--28
+SELECT PRO_PRICE, PRO_PRICE 
+FROM ITEM_mast
+WHERE PRO_PRICE >= 250
+ORDER BY PRO_PRICE DESC, PRO_NAME
+
+--29
+SELECT PRO_COM, AVG(PRO_PRICE) FROM ITEM_mast
+GROUP BY PRO_COM
+
+--30 
+SELECT PRO_NAME, PRO_PRICE FROM ITEM_mast
+WHERE PRO_PRICE = (SELECT MIN(PRO_PRICE) FROM ITEM_mast)
+
+--31 
+SELECT DISTINCT EMP_LNAME FROM EMP_DETAILS
+
+--32
+SELECT * FROM emp_details 
+WHERE EMP_LNAME = 'Snares'
+
+--33
+SELECT * FROM EMP_DETAILS
+WHERE EMP_DEPT = 57
 
