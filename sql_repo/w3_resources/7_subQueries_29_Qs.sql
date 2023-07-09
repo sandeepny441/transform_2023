@@ -60,5 +60,12 @@ order by customer.customer_id ASC
 seelct * from customer
 inner join orders
 where customer.customer_id = orders.customer_id
-order by orders.ord_date desc
+order by orders.ord_date
+
+--11 
+select * from cusotmers 
+left outer join orders 
+where customer.cust_id = orders.cust_id 
+left outer join salesman
+where orders.salesman_id = salesman.salesman_id
 
