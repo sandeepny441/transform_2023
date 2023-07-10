@@ -108,6 +108,11 @@ WHERE a.grade IS NOT NULL;
 -- # DOUBT 
 
 --17 
+select * from salesman 
+cross join customer 
+
+select * from customers, salesman.
+
 
 
 
