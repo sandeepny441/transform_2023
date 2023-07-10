@@ -1,0 +1,13 @@
+--Logical Operators  
+AND 
+OR 
+ANY 
+SOME 
+IN 
+EXISTS 
+NOT 
+IS NULL 
+BETWEEN 
+LIKE 
+UNIQUE 
+DISTINCT 
