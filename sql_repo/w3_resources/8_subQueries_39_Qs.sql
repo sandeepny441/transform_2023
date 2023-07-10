@@ -204,8 +204,92 @@ select * from customer
 where grade <>  (select grade from customer 
 where city = 'PARIS' and grade IS NOT  null )
 
-
 --30 
+select * from customer 
+where grade NOT IN  (select grade from customer 
+where city = 'DALLAS' and grade IS NOT  null )
+
+--31 
+select c.com_name, i.avg(pro_price)
+from company_mast c inner join item_mast i 
+group by c.com_name 
+where c.com_id = i.pro_com
+
+--32
+select c.pro_name, avg(i.pro_price) as avg_price
+from item_mast i 
+inner join c 
+where i.pro_com = c.com_id 
+group by i.pro_name 
+having avg_price > 350
+
+--33
+select i.pro_com, max(c.pro_price)
+from company_mast c 
+inner join item_mast i 
+where i.pro_com = c.pro_id 
+group by i.pro_com 
+
+--OR 
+SELECT P.pro_name AS "Product Name", 
+       P.pro_price AS "Price", 
+       C.com_name AS "Company"
+   FROM item_mast P, company_mast C
+   WHERE P.pro_com = C.com_id
+     AND P.pro_price =
+     (
+       SELECT MAX(P.pro_price)
+         FROM item_mast P
+         WHERE P.pro_com = C.com_id
+     );
+
+--34 
+select * from emp_details
+where EMP_LNAME IN ('Gabriel', 'Dosio')
+
+--35 
+select * from emp_details
+where emp_dept IN (89, 63)
+
+--36
+select * from emp_details
+where emp_dept IN (select dept_no from emp_department 
+                  where DPT_ALLOTMENT > 50000)
+
+--37 
+select * from emp_department
+where DPT_ALLOTMENT > (select avg(DPT_ALLOTMENT) from emp_department) 
+
+--38 
+select dept_no from emp_department
+where dept_no in (select dept_no from emp_details
+group by dept_no,
+ having count(count(distinct emp_id) > 2))
+
+select dept_no, count(distinct emp_id) as emp_count_by_dept 
+from emp_details
+group by dept_no 
+having emp_count_by_dept > 2
+
+--39 
+select dept_no from dept_details 
+order by dept_allocation DESC 
+limit 1 offset 1 
+
+select dept_no from dept_details
+where dept_no in 
+(select dept_no from dept_details 
+order by dept_allocation limit 1 offset 1 
+)
+
+select dept_no from dept_details
+where dept_no in 
+(select dept_no in dept_details 
+where dept_allocation < min(dept_allocation) 
+where dept_allocation > 
+(select min(dept_allocation) from dept_detials))
+
+
 
 
 
