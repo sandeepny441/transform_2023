@@ -111,7 +111,100 @@ WHERE a.grade IS NOT NULL;
 select * from salesman 
 cross join customer 
 
-select * from customers, salesman.
+select * from customers, salesman
+
+--18
+SELECT salesman.*, customer.*
+FROM salesman
+CROSS JOIN customer
+WHERE salesman.city = customer.city
+
+--19 
+SELECT salesman.*, customer.*
+FROM salesman
+CROSS JOIN customer
+WHERE salesman.city IS NOT NULL AND customer.grade IS NOT NULL
+
+--20 
+SELECT s.*, c.*
+FROM salesman s
+CROSS JOIN customer c
+WHERE s.city <> c.city
+AND c.grade IS NOT NULL;
+
+--21 
+SELECT c.*, i.*
+FROM company_mast c
+CROSS JOIN item_mast i
+WHERE c.com_id <> i.pro_com
+
+--22
+SELECT i.PRO_NAME AS item_name, 
+       i.PRO_PRICE AS price, 
+       c.COM_NAME AS company_name
+FROM item_mast i
+JOIN company_mast c ON i.PRO_COM = c.COM_ID;
+
+--23
+SELECT c.com_name, avg(i.pro_price)
+from company_mast c 
+inner join item_mast i 
+where c.com_id = i.pro_com
+grpup by c.com_name
+
+--24 
+SELECT c.com_name, avg(i.pro_price) as avg_pro_price
+from company_mast c 
+inner join item_mast i 
+on c.com_id = i.pro_com
+grpup by c.com_name
+having avg_pro_price > 350
+
+--25 
+SELECT i.PRO_NAME AS item_name, 
+       i.PRO_PRICE AS price, 
+       c.COM_NAME AS company_name,
+       max(i.pro_price) as max_pro_price
+FROM item_mast i
+JOIN company_mast c ON i.PRO_COM = c.COM_ID
+grpup by c.com_name
+
+--26
+select * from emp_department d
+inner join emp_details e
+d.DPT_CODE  = e.EMP_DEPT
+
+--27 
+select d.dept_allocation, e.name, e.emp_dept 
+ from emp_department d
+inner join emp_details e
+d.DPT_CODE  = e.EMP_DEPT
+
+--28 
+select d.dept_allocation, e.name, e.emp_dept 
+ from emp_department d
+inner join emp_details e
+d.DPT_CODE  = e.EMP_DEPT
+where d.dept_allocation > 50000
+
+--29 
+select  e.emp_dept, count(e.emp_id_no) as emp_per_dept
+ from emp_department d
+inner join emp_details e
+group by e.emp_dept 
+having emp_per_dept > 2 
+
+
+
+
+
+
+
+ 
+
+
+
+
 
 
 
