@@ -1,6 +1,7 @@
 SELECT Department, COUNT(*) 
 FROM Employees 
-GROUP BY Department;
+GROUP BY Department
+where saalary < 4000
 
 
 SELECT Department, JobTitle, COUNT(*) 

@@ -1,23 +1,17 @@
+-- ===================================================
 ALTER TABLE table_name
 ADD column_name datatype;
-
 
 ALTER TABLE employees
 ADD date_of_birth DATE;
 
-
+-- ===================================================
 ALTER TABLE table_name
-MODIFY column_name datatype;
-
+MODIFY column_name datatype
 
 ALTER TABLE employees
-MODIFY date_of_birth DATETIME;
-
-ALTER TABLE Employees
-ADD COLUMN Age INT;
-
-ALTER TABLE Employees
-ALTER COLUMN Salary DECIMAL(12, 2);
+MODIFY date_of_birth DATETIME
+-- ===================================================
 
 ALTER TABLE Employees
 DROP COLUMN Age;
