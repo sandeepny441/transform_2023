@@ -20,11 +20,4 @@ INSERT IGNORE INTO employees (employee_id, first_name, last_name, hire_date)
 VALUES (1, 'John', 'Doe', '2023-01-01');
 
 
-SELECT
-    date,
-    product,
-    units_sold,
-    LEAD(units_sold) OVER (PARTITION BY product ORDER BY date) AS prev_day_sales
-FROM sales
-
 
