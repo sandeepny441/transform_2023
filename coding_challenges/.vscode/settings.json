@@ -81,6 +81,32 @@
       "database": "sys",
       "username": "root",
       "password": "Mercury@100"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "sandeep_sql_inventory",
+      "database": "sql_inventory",
+      "username": "root",
+      "password": "Mercury@100"
+    },
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "hello",
+      "database": "world_x",
+      "username": "root",
+      "password": "Mercury@100"
     }
   ]
 }
