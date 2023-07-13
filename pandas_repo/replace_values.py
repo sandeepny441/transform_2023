@@ -15,3 +15,4 @@ df['B'].replace('MISSING', None, inplace=True)
 
 print("\nDataFrame after replacing values:")
 print(df)
+  
