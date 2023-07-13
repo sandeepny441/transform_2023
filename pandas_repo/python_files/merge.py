@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np 
 
 # Define two DataFrames
 df1 = pd.DataFrame({
