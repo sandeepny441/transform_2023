@@ -27,5 +27,5 @@ SELECT *
 FROM Employees 
 WHERE (Department = 'Sales' 
 OR Department = 'Marketing') 
-AND NOT Age > 50;
+AND NOT Age > 50
 

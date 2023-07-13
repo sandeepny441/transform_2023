@@ -1,3 +1,4 @@
+-- Active: 1688557879355@@localhost@3306
 SELECT 
 CASE 
     WHEN AGE < 30 THEN 'young'

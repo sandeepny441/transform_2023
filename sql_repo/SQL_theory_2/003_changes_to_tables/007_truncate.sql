@@ -9,3 +9,5 @@ TRUNCATE TABLE Employees;
 DELETE FROM Employees WHERE Department = 'HR';
 
 
+-- DROP >>>>>> TRUNCATE >>>>>>> DELETE 
+
