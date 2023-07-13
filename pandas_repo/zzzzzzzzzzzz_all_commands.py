@@ -53,3 +53,21 @@ df.min()/df.max() #Get minimum and maximum values in each column
 
 
 
+# Data Cleaning: Understand how to handle duplicates, replace values, and normalize data.
+
+# Data Reshaping: Learn about pivoting, melting, stacking, and unstacking DataFrames.
+
+# Combining DataFrames: Understand how to concatenate, merge, and join multiple DataFrames.
+
+# Data Aggregation and Group Operations: Learn how to use groupby, aggregation functions, and how to create pivot tables.
+
+# Date and Time Data: Understand how to work with date and time data, including conversion between datetime formats, resampling time-series data, and handling timezones.
+
+# Applying Functions: Learn how to apply your own or existing functions to data.
+
+# Visualization: Understand how to create basic plots and graphs directly from pandas.
+
+# Performance Tuning: Learn how to improve the performance of your pandas operations for large datasets.
+
+# Advanced Topics: Learn about more advanced pandas features like multi-indexing, categorical data, and advanced groupby operations.
+
