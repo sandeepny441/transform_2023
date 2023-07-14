@@ -1,3 +1,4 @@
+-- Active: 1688557879355@@localhost@3306
 -- Write a SQL subquery to find all customers whose creditLimit is less than the average creditLimit of all customers.
 select customernumber, creditlimit
 from customers 
@@ -127,7 +128,6 @@ as temp_SQ
 )
 
 -- Write a SQL subquery to find the country that has the fewest customers.
-
 select country from customers 
 where country = (select country from 
 (select country, count(distinct customernumber) as cust_count
