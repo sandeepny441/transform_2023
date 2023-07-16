@@ -12,3 +12,5 @@ SELECT NULLIF(TRIM(col),'') FROM data; -- Returns NULL for all rows where col is
  
  SELECT NULLIF(revenue, 0) FROM sales; -- Returns NULL for all rows where revenue is 0
 SELECT NULLIF(creditLimit, 0) from customers
+
+-- END OF NULLS :) 
