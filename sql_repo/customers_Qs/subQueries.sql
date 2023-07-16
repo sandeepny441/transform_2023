@@ -27,7 +27,6 @@ limit 1) as city_SUB_Query
 select customernumber from customers
 where city = (
               select city from
-              order by avg_credit_limit 
               (select city, avg(creditmit) as avg_credit_limit from customers
               group by city
               order by avg_credit_limit 
