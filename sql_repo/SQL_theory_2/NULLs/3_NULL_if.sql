@@ -1,23 +1,14 @@
--- Handling divisions by zero
--- This will replace any zero revenue values with NULL to exclude them from reports.
-SELECT NULLIF(10, 10)-- Returns NULL
+SELECT NULLIF(10, 10); -- Returns NULL because 10 is equal to 10
 
 
---Comparing values for equality
--- You can use NULLIF to filter out join rows where two columns have the same value.
-SELECT NULLIF(revenue, 0) FROM sales
-
--- Excluding default values
--- This will replace any rows with default status 'ACTIVE' to NULL.
-SELECT NULLIF(status, 'ACTIVE') FROM accounts
+SELECT NULLIF(status, 'ACTIVE') FROM accounts; -- Returns NULL for all rows where status is 'ACTIVE'
+SELECT NULLIF(salesRepEmployeeNumber, 4) FROM customers
 
 
--- Handling divisions by zero
--- NULLIF will return NULL instead of failing on divide by zero errors.
-SELECT NULLIF(denominator,0) 
-FROM calculations
+SELECT dividend / NULLIF(denominator,0) FROM calculations; -- Returns NULL instead of failing on divide by zero errors
+SELECT creditLimit / NULLIF(creditLimit,0) FROM customers;
 
-
--- Nulling out blanks or duplicates
--- This will turn blank values to NULL. You can also use it to null out duplicate values in a column.
-SELECT NULLIF(TRIM(col),'') FROM data
+SELECT NULLIF(TRIM(col),'') FROM data; -- Returns NULL for all rows where col is blank (after trimming)
+ 
+ SELECT NULLIF(revenue, 0) FROM sales; -- Returns NULL for all rows where revenue is 0
+SELECT NULLIF(creditLimit, 0) from customers
