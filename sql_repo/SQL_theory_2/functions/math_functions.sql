@@ -3,6 +3,7 @@ SELECT ABS(-15);
 
 -- Power
 SELECT POWER(2,3); 
+-- 8
 
 -- Square Root  
 SELECT SQRT(25);
