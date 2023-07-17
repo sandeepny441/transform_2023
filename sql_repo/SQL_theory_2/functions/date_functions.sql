@@ -59,4 +59,10 @@ FROM orders
 SELECT LAST_DAY(order_date) 
 FROM orders
 
+-- select orderDate, MONTHNAME(orderDate) from orders
+-- select orderDate, DAYNAME(orderDate) from orders
+-- SELECT orderDate, DAYOFYEAR(orderDate) from orders
+-- ORDER BY DAYOFYEAR(orderDate) DESC
+SELECT WEEK('2023-1-2')
+
 
