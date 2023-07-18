@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 # Create a DataFrame
 df = pd.DataFrame({
   'A': ['one', 'one', 'two', 'three'] * 3,
@@ -9,4 +9,8 @@ df = pd.DataFrame({
   'E': np.random.randn(12)
 })
 
+print(df)
+print("----------------------------------------")
 pd.crosstab(df.A, df.B)
+print("----------------------------------------")
+print(df)

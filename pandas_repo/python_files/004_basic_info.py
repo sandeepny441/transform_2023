@@ -1,4 +1,4 @@
-#basic info
+# basic info
 df.shape  # Get the shape of the DataFrame (rows, columns)
 df.size  # Get the size of the DataFrame (rows * columns)
 df.info()  # Get a summary of the DataFrame
