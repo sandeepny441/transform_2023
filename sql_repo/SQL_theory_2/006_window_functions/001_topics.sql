@@ -26,7 +26,7 @@ Ranking
       ROW_NUMBER
       RANK
       DENSE_RANK 
-      CUME_DISK 
+      CUME_DIST
       PERCENT_RANK 
       NTILE
 
