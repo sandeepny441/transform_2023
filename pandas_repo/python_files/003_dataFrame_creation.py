@@ -36,3 +36,73 @@ df7 = pd.read_excel('filename.xlsx')
 # From a SQL query (you need a real SQLite database for this to work)
 conn = sqlite3.connect('database.db')
 df8 = pd.read_sql_query("SELECT * FROM tablename", conn)
+
+
+# create a dictionary and use all methods 
+# to create a dataframe
+data = {'Name':['Tom', 'nick', 'krish', 'jack'],
+        'Age':[20, 21, 19, 18]}
+df = pd.DataFrame(data)
+print(df)
+# create a fucntion to check if a number is prime 
+def is_prime(n):
+    if n <= 1:
+        return False
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                return False
+        return True 
+# create a list of prime numbers
+prime_numbers = []    
+for i in range(100):
+    if is_prime(i):
+        prime_numbers.append(i) 
+# create a dictionary of prime numbers
+data = {'Prime Numbers': prime_numbers}
+# create a dataframe from the dictionary
+df = pd.DataFrame(data)
+print(df)
+# create a list of lists
+
+data = [['tom', 10], ['nick', 15], ['juli', 14]]
+# create a dataframe from the list of lists
+df = pd.DataFrame(data, columns = ['Name', 'Age'])
+print(df)
+# create a list of dictionaries
+data = [{'a': 1, 'b': 2}, {'a': 5, 'b': 10, 'c': 20}]
+# create a dataframe from the list of dictionaries
+df = pd.DataFrame(data)
+print(df)
+# create a list of tuples
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+
+df = pd.DataFrame(data, columns = ['Name', 'Age'])
+print(df)
+# create a list of tuples
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float)
+print(df)
+# create a list of tuples
+
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float, index=['rank1','rank2','rank3'])
+print(df)
+# create a list of tuples
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float, index=['rank1','rank2','rank3'])
+print(df)
+# create a list of tuples
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float, index=['rank1','rank2','rank3'])
+
+print(df)
+# create a list of tuples
+data = [('tom', 10), ('nick', 15), ('juli', 14)]
+# create a dataframe from the list of tuples
+df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float, index=['rank1','rank2','rank3'])

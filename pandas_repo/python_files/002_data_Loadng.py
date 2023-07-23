@@ -13,3 +13,7 @@ df.to_sql(table_name, connection) # Write DataFrame to SQL database
 df.to_json( orient='records') # Convert DataFrame to JSON string
 
 df.to_excel(excel_file) # Write DataFrame to Excel file
+
+# create a dataframe 
+
+

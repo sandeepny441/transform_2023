@@ -12,6 +12,8 @@ df.drop(how = '0.4')
 df.fillna(fill_with_this_value)  # Replace all NA/null data with a specified value
 df.fillna(df.mean())
 df.fillna(method='ffill')
+
+
 df.fillna(method='bfill')
 df.isnull().sum() #Summarize number of missing values in each column
 df.memory_usage() #Get memory usage of DataFrame

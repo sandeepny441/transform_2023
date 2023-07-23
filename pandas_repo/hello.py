@@ -1,19 +1,28 @@
+def add_two_nums(num1, num2):
+  return num1 + num2 
 
-import os 
-import json
+# Path: test_hello.py
+import unittest
+from hello import add_two_nums
+
+class TestAddTwoNums(unittest.TestCase):
+  def test_add_two_nums(self):
+    self.assertEqual(add_two_nums(3, 5), 8)
+    self.assertEqual(add_two_nums(-1, 1), 0)
+    self.assertEqual(add_two_nums(-1, -1), -2)
+    self.assertEqual(add_two_nums(5, 5), 10)
 
 
-# List of your file names
-file_names = os.listdir()  # replace with your file names
+if __name__ == '__main__':
+  unittest.main()
+# Path: hello.py
+# def add_two_nums(num1, num2):
+#   return num1 + num2
+# # Path: test_hello.py
+# import unittest
+# from hello import add_two_nums
+# class TestAddTwoNums(unittest.TestCase):
+#   def test_add_two_nums(self):
 
-# Minimal Jupyter notebook structure
-notebook = {
-"cells": [],
-"metadata": {},
-"nbformat": 4,
-"nbformat_minor": 4
-}
+  
 
-for file_name in file_names:
-  with open(f"{file_name}.ipynb", 'w') as f:
-    json.dump(notebook, f)
