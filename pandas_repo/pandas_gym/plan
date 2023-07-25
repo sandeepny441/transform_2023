@@ -1,0 +1,45 @@
+Pandas Basics:
+
+Understanding Series and DataFrames
+Reading data from various sources (CSV, Excel, SQL, etc.)
+Basic DataFrame operations (filtering, sorting, etc.)
+
+
+Data Cleaning:
+
+Handling missing values (detecting, dropping, filling)
+Removing duplicates
+Type conversion
+Data Wrangling:
+
+Merging, joining, and concatenating DataFrames
+Reshaping and pivoting
+Applying functions (both built-in and user-defined)
+Data Aggregation and Group Operations:
+
+Group by operations
+Aggregation functions (mean, sum, count, custom aggregations)
+Data Transformation:
+
+Mapping
+Binning
+Encoding categorical variables
+Time Series Analysis:
+
+Resampling
+Moving window functions
+Working with timestamps
+Performance:
+
+Understanding pandas' data types and how they affect memory usage
+Utilizing vectorized operations
+Applying operations in chunks (useful for large datasets)
+Visualization:
+
+Using pandas' built-in plotting capabilities
+Advanced Topics:
+
+Working with text data
+Working with hierarchical indexing
+Proficiency with the pandas API, e.g., defining and using accessor methods
+Remember that pandas is a tool for data manipulation and while it is crucial, FAANG interviews will also test your understanding of various other concepts like data structures, algorithms, machine learning, statistics, etc. So, while learning pandas thoroughly, also focus on these other aspects.z
