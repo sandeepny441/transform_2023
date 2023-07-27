@@ -24,6 +24,8 @@ s.reset_index()
 s.isin(values)
 
 # more 
+s.drop() # Drop values from rows (axis=0) or columns (axis=1)
+s.drop_duplicates() # Drop duplicate values
 s.astype(dtype) # Cast values to dtype
 s.replace(val1, val2) # Replace values 
 s.rename() # Rename index labels
@@ -32,3 +34,6 @@ s.duplicated() # Check for duplicates
 s.interpolate() # Fill NaNs by interpolation 
 s.clip(lower, upper) # Trim values to range
 s.expanding(min_periods).mean() # Expanding statistics
+
+
+
