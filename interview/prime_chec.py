@@ -1,29 +1,27 @@
-# def draw_pyramid_pattern(given_num):
-#   row_number = 1
-#   column_number = 1 
-#   while row_number < 4:
-#     while column_number < 6:
-#       if row_number + column_number 
+# pandas groupby to select city with top 5  salaries
 
-# AABAA: 4 
-# ABABA: 4, 6
-# BABAB: 
+import pandas as pd
+import numpy as np
 
-# program for pyramid pattern of stars, equilateral triangle
-# Path: pyramid_pattern.py
-def draw_pyramid_pattern(given_num):
-  row_number = 1
-  column_number = 1
-  while row_number <= given_num:
-    while column_number <= given_num:
-      if row_number + column_number >= given_num + 1:
-        print("*", end="")
-      else:
-        print(" ", end="")
-      column_number += 1
-    print()
-    row_number += 1
-    column_number = 1
+df = pd.read_csv('data.csv')
+df = df.dropna()
+df = df[df['Salary or Hourly'] == 'Salary']
+df = df.groupby('Department')['Annual Salary'].mean()
+df = df.sort_values(ascending=False)
+df = df.head(5)
+print(df)
+
+#program to find the most common words in a sentence
+# Path: most_common_words.py
+
+
+def most_common_words(text):
+    text = text.split()
+    d = {}
+    for word in text:
+        if word not in d:
+            d[word] = 1
+        else:
+            d[word] += 1
+    return d
   
-
-draw_pyramid_pattern(4)
