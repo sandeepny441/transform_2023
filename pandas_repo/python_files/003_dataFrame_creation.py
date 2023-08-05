@@ -106,3 +106,6 @@ print(df)
 data = [('tom', 10), ('nick', 15), ('juli', 14)]
 # create a dataframe from the list of tuples
 df = pd.DataFrame(data, columns = ['Name', 'Age'], dtype = float, index=['rank1','rank2','rank3'])
+
+
+print('Hello world')
