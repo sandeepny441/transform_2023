@@ -8,9 +8,7 @@ s.isnull().sum()
 s.dropna()
 s.fillna(value)
 
-# apply functions 
-s.apply(func)
-s.map(dict)
+
 
 # sorting 
 s.sort_values()
@@ -20,11 +18,13 @@ s.sort_index()
 s.reindex()
 s.reset_index()
 
+# more 
+s.drop() # Drop values from rows (axis=0) or columns (axis=1)
+
 #membership 
 s.isin(values)
 
-# more 
-s.drop() # Drop values from rows (axis=0) or columns (axis=1)
+
 s.drop_duplicates() # Drop duplicate values
 s.astype(dtype) # Cast values to dtype
 s.replace(val1, val2) # Replace values 
@@ -36,4 +36,6 @@ s.clip(lower, upper) # Trim values to range
 s.expanding(min_periods).mean() # Expanding statistics
 
 
-
+# apply functions 
+s.apply(func)
+s.map(dict)
