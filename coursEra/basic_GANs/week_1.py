@@ -106,3 +106,5 @@ Now you can build the generator class. It will take 3 values:
 Using these values, the generator will build a neural network with 5 layers/blocks. Beginning with the noise vector, the generator will apply non-linear transformations via the block function until the tensor is mapped to the size of the image to be outputted (the same size as the real images from MNIST). You will need to fill in the code for final layer since it is different than the others. The final layer does not need a normalization or activation function, but does need to be scaled with a [sigmoid function](https://pytorch.org/docs/master/generated/torch.nn.Sigmoid.html). 
 
 Finally, you are given a forward pass function that takes in a noise vector and generates an image of the output dimension using your neural network.
+
+Have to do this tonight
