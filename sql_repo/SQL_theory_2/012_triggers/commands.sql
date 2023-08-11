@@ -20,7 +20,7 @@ END;
 Here is a basic example of an "AFTER INSERT" trigger:
 
 sql
-Copy code
+
 CREATE TRIGGER after_employee_insert
 AFTER INSERT
 ON employees FOR EACH ROW
