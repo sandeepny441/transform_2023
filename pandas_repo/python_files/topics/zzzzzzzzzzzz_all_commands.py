@@ -47,12 +47,11 @@ df.fillna(df.mean())
 df.fillna(method='ffill')
 df.fillna(method='bfill')
 df.isnull().sum() #Summarize number of missing values in each column
-
-#memroy usage
-df.memory_usage() #Get memory usage of DataFrame
 df.min()/df.max() #Get minimum and maximum values in each column
 
 
+#memroy usage
+df.memory_usage() #Get memory usage of DataFrame
 
 
 # Data Cleaning: Understand how to handle duplicates, replace values, and normalize data.
