@@ -6,3 +6,4 @@ df1 = pd.DataFrame({
     'key': ['A', 'B', 'C', 'D'],
     'value': np.random.randn(4)
 })
+
