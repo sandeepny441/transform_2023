@@ -1,0 +1,35 @@
+// Example JS to dynamically add blog posts
+
+const blogPosts = [
+  {
+    title: 'First Post', 
+    content: 'Lorem ipsum...',
+    date: 'August 1, 2023'
+  },
+  {
+    title: 'Second Post',
+    content: 'dolor sit amet...', 
+    date: 'August 5, 2023'
+  }
+];
+
+function addBlogPost(post) {
+
+  const article = document.createElement('article');
+  const h2 = document.createElement('h2');
+  h2.textContent = post.title;
+  article.appendChild(h2);
+
+  const p1 = document.createElement('p');
+  p1.textContent = post.content;
+  article.appendChild(p1);
+
+  const p2 = document.createElement('p');
+  p2.innerHTML = 'Posted on <time datetime="' + post.date + '">' + post.date + '</time>';
+  article.appendChild(p2);
+
+  document.querySelector('main').appendChild(article);
+
+}
+
+blogPosts.forEach(addBlogPost);
