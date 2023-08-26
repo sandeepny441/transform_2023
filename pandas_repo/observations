@@ -1,0 +1,7 @@
+LOC
+
+LOC is Label Based Indexiing so 1:3 means 1, 2, 3 - INCLUSIVE
+Python in Position based indexing, so 1:3 means 1, 2
+
+ when using label-based indexing with .loc, 
+ negative indices don't work as they do in standard Python lists.
