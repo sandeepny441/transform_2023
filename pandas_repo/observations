@@ -17,6 +17,12 @@ if we dont use .loc, we might be working on a copy of the dataframe, so the resu
 When these operations are chained, you might be working on a copy of the data (not always, it depends on the memory layout), so any changes you make don't affect the original DataFrame. On the other hand, .loc ensures that you're working directly on the original DataFrame, making assignments as expected.
 
 
+------------------- count
+(df['A'] == 10).count()
+(df['A'] == 10).sum()
+df['A'].duplicated()
+
+
 
 
 
