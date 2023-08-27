@@ -22,6 +22,16 @@ When these operations are chained, you might be working on a copy of the data (n
 (df['A'] == 10).sum()
 df['A'].duplicated()
 
+axis = 0 will apply column wise
+axis = 1 will apply row wise
+
+------------------- size
+df['B'].size -- count of missing and non-missing values
+df['B'].count() -- count of non-missing values
+
+
+
+
 
 
 
