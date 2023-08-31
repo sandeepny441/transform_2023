@@ -1,0 +1,77 @@
+
+
+import pandas as pd
+data = {}
+
+data['A'] = list(range(10))
+data['B'] = list(range(10, 20))
+data['C'] = list(range(20, 30))
+
+df1 = pd.DataFrame(data)
+df1.head()
+
+
+# 1- LOC questions 
+
+Basic Indexing: How would you use loc to get all the values in the row where the index is 2? 
+ 
+Multiple Columns: How would you use loc to retrieve the values in columns 'A' and 'C' for the rows with indices 1 and 3? 
+ 
+Conditional Filtering: How can you use loc to filter rows where the values in column 'B' are greater than or equal to 13 and only show column 'A' for those rows? 
+ 
+Row and Column Together: How would you use loc to get the value located in the row with index 4 and column 'B'? 
+ 
+Modify Values: How would you use loc to change the value in the row where the index is 0 and the column is 'C' to 99?
+
+Range of Rows: How would you use loc to select all rows from index 2 to 5, inclusive, and only columns 'A' and 'B'?
+
+Boolean Conditions with Multiple Columns: How can you use loc to filter rows where column 'A' is greater than 10 and column 'B' is less than 20, and then only retrieve these rows for columns 'A' and 'C'?
+
+Modify Multiple Values: How would you use loc to change all values in column 'D' to 0 where column 'B' is less than 5?
+
+Slice Columns: How can you use loc to select all rows and columns from 'B' to 'D'?
+
+Modify Row Values: How would you use loc to update all the column values in a row with index 3 to a new list of values [10, 20, 30, 40]?
+
+Negate Conditions: How would you use loc to select all rows where column 'A' is not equal to 10 and then only retrieve the values for columns 'C' and 'D'?
+
+Multiple Conditions for Rows and Columns: How would you use loc to select rows where column 'A' is greater than 5 and column 'B' is not equal to 7, and then retrieve columns 'A', 'C', and 'E'?
+
+Set Values Based on Another Column: How would you use loc to set the values in column 'D' to be the same as the values in column 'B' for rows where column 'A' is greater than 10?
+
+Partial String Matching: If column 'E' contains string values, how would you use loc to filter rows where the values in column 'E' start with the letter 'S', and retrieve only column 'A' for those rows?
+
+Using Functions in Conditions: How would you use loc to filter rows based on a custom function applied to one of the columns, and then retrieve specific columns for those rows?
+
+
+# 2- iloc 15 Questions
+How would you use .iloc to get the first row of the DataFrame?
+
+How would you use .iloc to get the last row of the DataFrame?
+
+How would you use .iloc to get the first 3 rows and the first 2 columns?
+
+How would you use .iloc to get the last 2 rows and last 2 columns?
+
+How would you use .iloc to get all the rows but only the first column?
+
+How would you use .iloc to get all the columns but only the third row?
+
+How would you use .iloc to get rows from index 4 to index 6, inclusive, and only the second column?
+
+How would you use .iloc to get the value at the fifth row and third column?
+
+How would you use .iloc to get all rows for columns at index 0 and index 2?
+
+How would you use .iloc to update the value at the first row and first column to 99?
+
+How would you use .iloc to set all values in the last column to 0?
+
+How would you use .iloc to swap the first and last rows?
+
+How would you use .iloc to reverse the order of rows?
+
+How would you use .iloc to get rows where the index is even and only the first column?
+
+How would you use .iloc to get rows from index 2 to index 8 but only for columns at index 1 and index 2?
+
