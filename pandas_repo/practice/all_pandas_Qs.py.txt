@@ -75,3 +75,50 @@ How would you use .iloc to get rows where the index is even and only the first c
 
 How would you use .iloc to get rows from index 2 to index 8 but only for columns at index 1 and index 2?
 
+
+#Count Questions
+import pandas as pd
+
+# Create a dictionary containing your data
+data = {
+    'worker_id': [1, 2, 3, 4, 5],
+    'first_name': ['Monika', 'Niharika', 'Vishal', 'Amitah', 'Vivek'],
+    'last_name': ['Arora', 'Verma', 'Singhal', 'Singh', 'Bhati'],
+    'salary': [100000, 80000, 300000, 500000, 500000],
+    'joining_date': ['2014-02-20 00:00:00', '2014-06-11 00:00:00', '2014-02-20 00:00:00', '2014-02-20 00:00:00', '2014-06-11 00:00:00'],
+    'department': ['HR', 'Admin', 'HR', 'Admin', 'Admin']
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+
+How would you use count to find the total number of rows in the DataFrame?
+
+How can you use count to find the number of non-NA/null entries in the 'salary' column?
+
+How would you apply count to find the number of non-NA/null entries for each column in the DataFrame?
+
+Can you use count along with groupby to find out how many workers are in each department?
+
+How can you use count to find out how many unique 'joining_date' values are present in the DataFrame?
+
+How would you use count to determine the number of workers who have a salary greater than 100,000?
+
+Is it possible to use count to find the number of workers with the last name 'Singh'? How would you do it?
+
+Can you apply count to find the number of rows where both 'first_name' and 'last_name' are non-NA/null?
+
+How would you use count to find the number of workers who joined before a certain date, for example, '2014-05-01'?
+
+Can you use count and query together to find the number of 'HR' department workers with a salary greater than 100,000?
+
+How can you use count along with loc to find the number of entries in the 'first_name' column for the department 'Admin'?
+
+How would you use count to find the number of workers who have 'last_name' with more than 5 characters?
+
+Can you use count to find the number of rows where the 'worker_id' is an even number?
+
+How would you use count to find the number of workers whose 'first_name' starts with the letter 'V'?
+
+How would you use count to determine how many workers have both 'first_name' and 'last_name' that are exactly 6 characters long?
