@@ -43,6 +43,8 @@ Partial String Matching: If column 'E' contains string values, how would you use
 
 Using Functions in Conditions: How would you use loc to filter rows based on a custom function applied to one of the columns, and then retrieve specific columns for those rows?
 
+======================================================================================================
+======================================================================================================
 
 # 2- iloc 15 Questions
 How would you use .iloc to get the first row of the DataFrame?
@@ -75,6 +77,8 @@ How would you use .iloc to get rows where the index is even and only the first c
 
 How would you use .iloc to get rows from index 2 to index 8 but only for columns at index 1 and index 2?
 
+======================================================================================================
+======================================================================================================
 
 #Count Questions
 import pandas as pd
@@ -122,3 +126,116 @@ Can you use count to find the number of rows where the 'worker_id' is an even nu
 How would you use count to find the number of workers whose 'first_name' starts with the letter 'V'?
 
 How would you use count to determine how many workers have both 'first_name' and 'last_name' that are exactly 6 characters long?
+
+======================================================================================================
+======================================================================================================
+
+# size Questions 
+
+import pandas as pd
+from datetime import datetime
+
+# Sample data
+data = {
+    'Order_ID': [1, 2, 3, 4, 5],
+    'Customer_ID': [101, 102, 103, 104, 105],
+    'Restaurant_ID': [201, 202, 203, 204, 205],
+    'Order_Date': [datetime(2023, 8, 1), datetime(2023, 8, 2), datetime(2023, 8, 3), datetime(2023, 8, 4), datetime(2023, 8, 5)],
+    'Order_Time': ['12:30:00', '18:45:00', '19:20:00', '13:15:00', '09:30:00'],
+    'Food_Item': ['Burger', 'Sushi', 'Pasta', 'Pizza', 'Salad'],
+    'Quantity': [2, 1, 3, 1, 1],
+    'Price': [12.99, 18.50, 10.99, 14.99, 7.99],
+    'Delivery_Time(min)': [30, 45, 40, 35, 25],
+    'Rating': [4.5, 4.0, 5.0, 3.5, 4.0]
+}
+
+# Create DataFrame
+uber_eats_df = pd.DataFrame(data)
+
+What will the size attribute return when applied to the uber_eats_df DataFrame?
+
+How would you verify if the size attribute counts the number of rows, columns, or individual elements in the DataFrame?
+
+If you apply a filter to uber_eats_df to only include rows where Rating is greater than or equal to 4.5, what will the size attribute return for the filtered DataFrame?
+
+Compare the output of uber_eats_df.size and uber_eats_df.shape. What mathematical operation could you apply to the values in shape to derive the value of size?
+
+If you select only the 'Food_Item' and 'Price' columns from uber_eats_df, what will be the output of the size attribute?
+
+How would the size attribute change if you dropped a row from uber_eats_df? Can you confirm this by coding it?
+
+Create a Series object by selecting the Price column from uber_eats_df. What does the size attribute show for this Series object?
+
+Does the size attribute include NaN values if they were present in the DataFrame? (You might want to modify the DataFrame to include a NaN value to answer this question.)
+
+How would the output of uber_eats_df.size change if you added a new column to the DataFrame? Can you confirm your answer by coding it?
+
+#========================================================================================
+#========================================================================================
+#NULLs
+
+import pandas as pd
+import numpy as np
+
+# Sample DataFrame
+data = {
+    'Product_ID': [1, 2, 3, 4, 5, np.nan],
+    'Product_Name': ['Laptop', 'Phone', 'TV', 'Headphones', None, 'Microwave'],
+    'Stock': [20, 15, np.nan, 30, 25, 12],
+    'Price': [999.99, 799.99, 399.99, np.nan, 59.99, 99.99],
+    'Discounted': [True, False, True, False, np.nan, True],
+}
+
+target_df = pd.DataFrame(data)
+
+NULLs 
+
+Identify Null values
+How would you identify rows where the 'Stock' column has null values in the provided target_df DataFrame?
+Can you list the columns in target_df that contain at least one null value?
+How would you use pd.isna() to identify null values in the entire target_df DataFrame?
+If you wanted to identify rows where both 'Stock' and 'Price' have null values, how would you do it?
+
+Filtering
+How would you filter out rows where the 'Stock' column has null values in the target_df DataFrame?
+What method would you use to remove any row that has at least one null value in target_df?
+If you only want to drop rows where both 'Stock' and 'Price' have null values, how would you go about doing this in target_df?
+
+Filling 
+How would you fill null values in the 'Stock' column with the median value of that column?
+Can you use the .fillna() method to fill null values in multiple columns ('Stock' and 'Price') at once? If so, how?
+If you only want to fill the first null value in each column with a zero, how would you do it?
+
+
+Counting 
+How would you count the number of null values in the entire DataFrame?
+Is there a way to get a count of non-null values for each column in the DataFrame?
+How would you count null values in a specific row, say the row at index 2?
+
+
+Replacing 
+If you wanted to replace all null values in the DataFrame with the string "Unknown", how would you do it?
+Can you replace null values in one column ('Stock') with zero and in another column ('Discounted') with False, all in a single line of code?
+How would you replace all instances of a specific value, let's say 999.99 in the 'Price' column, with np.nan?
+
+
+Operations 
+How would you calculate the sum of each column in target_df, considering that some columns might have null values?
+If you have null values in the 'Stock' and 'Price' columns, and you attempt to multiply these columns element-wise, what will happen to the resulting product where null values are involved?
+How would you use the dropna method to perform an operation, say calculating the mean, only on non-null elements in the 'Stock' column?
+
+
+Propagating
+How would you propagate the last valid observation in the 'Stock' column to fill NaN values?
+Can you propagate the next valid observation backward to fill NaN values in the 'Price' column? If so, how would you do it?
+How would you limit the number of NaN values filled by forward fill (or backward fill) to 1 in the 'Stock' column?
+
+
+
+
+
+
+
+
+
+
