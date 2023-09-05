@@ -18,7 +18,5 @@ def predict():
     prediction = model.predict(month)[0]  # Get prediction from model
     return jsonify({'prediction': prediction})  # Return the prediction as JSON
 
-a = 200 
-print(a)
 if __name__ == '__main__':
     app.run(port=5000)

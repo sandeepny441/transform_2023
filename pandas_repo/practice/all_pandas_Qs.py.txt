@@ -230,6 +230,50 @@ How would you propagate the last valid observation in the 'Stock' column to fill
 Can you propagate the next valid observation backward to fill NaN values in the 'Price' column? If so, how would you do it?
 How would you limit the number of NaN values filled by forward fill (or backward fill) to 1 in the 'Stock' column?
 
+# unqiue and n-unique
+import pandas as pd
+
+# Sample data
+data = {
+    'Product_ID': [1, 2, 3, 4, 5, 6, 1, 2, 3, 4],
+    'Product_Name': ['Toothpaste', 'Shampoo', 'Laptop', 'TV', 'Coffee Maker', 'Blender', 'Toothpaste', 'Shampoo', 'Laptop', 'TV'],
+    'Category': ['Personal Care', 'Personal Care', 'Electronics', 'Electronics', 'Kitchen Appliances', 'Kitchen Appliances', 'Personal Care', 'Personal Care', 'Electronics', 'Electronics'],
+    'Price': [5.0, 10.0, 1000.0, 600.0, 50.0, 30.0, 5.0, 10.0, 1000.0, 600.0],
+    'Units_Sold': [100, 50, 20, 15, 30, 25, 110, 55, 22, 17]
+}
+
+target_df = pd.DataFrame(data)
+
+#UNIQUE
+How many unique Product_IDs are there in the DataFrame?
+What are the unique product categories available in the DataFrame?
+How many different price points are in the DataFrame?
+Are there any products that were sold in different units (check for unique 'Units_Sold')?
+How many unique combinations of 'Product_ID' and 'Price' are there?
+Are all 'Units_Sold' for 'Toothpaste' the same or are there unique values?
+
+#N_UNIQUE
+How many unique categories of products does the Target store offer? Use nunique() to find out.
+How many different unique price points exist for 'Electronics' in the DataFrame? Use nunique() to get the answer.
+Are the units in which products sold always unique, or do some products share the same number of 'Units_Sold'? Use nunique() to determine this.
+How many unique 'Product_ID' are there for products in the 'Personal Care' category? Utilize nunique() for this.
+
+# duplicate
+How would you identify if there are any duplicate rows in the DataFrame? What function would you use?
+If the DataFrame has a column for 'Product_ID', how would you find out if there are any duplicate 'Product_ID' entries?
+How would you remove duplicate rows in the DataFrame? Which function can accomplish this?
+If the DataFrame has columns 'Product_ID' and 'Product_Category', how would you remove rows where only 'Product_ID' is duplicated but keep the first occurrence?
+Is it possible to keep the last occurrence of a duplicate 'Product_ID' and remove the rest? If so, how would you do it?
+
+#drop_duplicates
+How would you use the drop_duplicates function to remove all rows that have identical values across all columns?
+If your DataFrame contains columns 'Product_ID', 'Product_Name', and 'Price', how would you use drop_duplicates to keep only the unique 'Product_ID' rows, while retaining the first occurrence of each 'Product_ID'?
+Is it possible to use drop_duplicates to remove duplicates based on multiple columns, say 'Product_ID' and 'Price'? If so, how would you do it?
+How would you use drop_duplicates to keep the last occurrence of each duplicate row based on 'Product_ID' and remove the earlier ones?
+Can you specify whether to keep or drop duplicates in place, without creating a new DataFrame? If so, what parameter would you use?
+
+#drop 
+
 
 
 
