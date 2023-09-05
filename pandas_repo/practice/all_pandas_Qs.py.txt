@@ -272,7 +272,42 @@ Is it possible to use drop_duplicates to remove duplicates based on multiple col
 How would you use drop_duplicates to keep the last occurrence of each duplicate row based on 'Product_ID' and remove the earlier ones?
 Can you specify whether to keep or drop duplicates in place, without creating a new DataFrame? If so, what parameter would you use?
 
-#drop 
+# SORT_Questions
+import pandas as pd
+
+# Sample data
+data = {
+    'Player': ['Roger Federer', 'Rafael Nadal', 'Novak Djokovic', 'Serena Williams', 'Margaret Court', 'Arthur Ashe', 'Andre Agassi', 'Pete Sampras', 'Martina Navratilova', 'Chris Evert', 'Steffi Graf', 'Rod Laver'],
+    'Total_Slams': [20, 20, 20, 23, 24, 3, 8, 14, 18, 18, 22, 11],
+    'Wimbledon': [8, 2, 6, 7, 3, 1, 1, 7, 9, 3, 7, 4],
+    'US_Open': [5, 4, 3, 6, 5, 1, 2, 5, 4, 6, 5, 2],
+    'Australian_Open': [6, 1, 9, 7, 11, 1, 4, 2, 3, 2, 4, 3],
+    'French_Open': [1, 13, 2, 3, 5, 0, 1, 0, 2, 7, 6, 2],
+}
+
+tennis_df = pd.DataFrame(data)
+
+How would you sort the DataFrame based on the "Total_Slams" column in descending order?
+
+Can you sort the DataFrame by the players' names in alphabetical order? What method would you use?
+
+Is it possible to sort the DataFrame based on multiple columns? For instance, sort by "Total_Slams" first and then by "Wimbledon" titles.
+
+How would you sort the DataFrame based on the "French_Open" column but keep the original index?
+
+Can you perform an in-place sort on the "US_Open" titles, so the original DataFrame is modified?
+
+What is the syntax for sorting the DataFrame based on "Australian_Open" in ascending order but returning only a subset of the DataFrame instead of modifying it?
+
+How would you reset the index after sorting the DataFrame based on "Total_Slams"?
+
+Is it possible to sort just a Series extracted from the DataFrame? For example, sort the "Wimbledon" Series.
+
+How can you sort the DataFrame by the index after you've sorted it by a column?
+
+Can you sort the DataFrame by "Total_Slams" in descending order but display only the top 5 players?
+
+
 
 
 
