@@ -380,6 +380,45 @@ How would you use the astype method to change multiple columns' data types at on
 If you wanted to represent prices in cents rather than dollars and needed the 'Price ($)' column as an integer reflecting this change, how would you use astype along with a transformation?
 
 
+#============================================================================================================================
+#============================================================================================================================
+
+import pandas as pd
+
+# Sample DataFrame for pet stores in the US
+data = {
+    'Store_ID': [1001, 1002, 1003, 1004, 1005],
+    'Store_Name': ['Pet Paradise', 'Animal Kingdom', 'Furry Friends', 'Pet Pals', 'Fauna House'],
+    'Location': ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'],
+    'Speciality': ['Fish', 'Birds', 'Dogs', 'Cats', 'Reptiles'],
+    'Rating': [4.5, 4.2, 3.9, 4.7, 4.0]
+}
+
+df_pet_stores = pd.DataFrame(data)
+
+#replace_questions
+How would you replace all occurrences of 'New York' in the Location column with 'NYC'?
+If you wanted to change ratings of 4.5 to 5, how would you use the replace method for this task?
+How can you replace the speciality 'Dogs' with 'Canines' in the DataFrame?
+If you had a dictionary of old and new store names, how would you apply the replace method to update the store names in the DataFrame?
+How would you replace ratings below 4 with a string 'Low Rating'?
+
+#rename_questiopns
+How can you rename the column 'Speciality' to 'Pet_Type'?
+If you wanted to change 'Store_Name' to 'Pet_Store_Name' and 'Rating' to 'Customer_Rating', how would you achieve this using the rename method?
+Can the rename method be used to change the index names? If so, demonstrate how.
+How would you use the rename method to change the name of the store with Store_ID 1003?
+Is there a way to use the rename method to change column names to lowercase?
+
+#reset_index_questions 
+How would you reset the index of the DataFrame without keeping the old index as a new column?
+By default, what name is given to the column that holds the old index values when using reset_index?
+If you set a new index for the DataFrame using the set_index method, how would you revert back to the original indexing using reset_index?
+How can you reset the index of the DataFrame and simultaneously set the drop parameter to True?
+If you wanted the new index to start from a number other than 0, how would you achieve this after using the reset_index method?
+
+#============================================================================================================================
+#============================================================================================================================
 
 
 
