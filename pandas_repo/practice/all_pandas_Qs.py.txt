@@ -1,5 +1,6 @@
 
-
+#====================================================================================================================
+#====================================================================================================================
 import pandas as pd
 data = {}
 
@@ -229,7 +230,8 @@ Propagating
 How would you propagate the last valid observation in the 'Stock' column to fill NaN values?
 Can you propagate the next valid observation backward to fill NaN values in the 'Price' column? If so, how would you do it?
 How would you limit the number of NaN values filled by forward fill (or backward fill) to 1 in the 'Stock' column?
-
+#====================================================================================================================
+#====================================================================================================================
 # unqiue and n-unique
 import pandas as pd
 
@@ -257,7 +259,8 @@ How many unique categories of products does the Target store offer? Use nunique(
 How many different unique price points exist for 'Electronics' in the DataFrame? Use nunique() to get the answer.
 Are the units in which products sold always unique, or do some products share the same number of 'Units_Sold'? Use nunique() to determine this.
 How many unique 'Product_ID' are there for products in the 'Personal Care' category? Utilize nunique() for this.
-
+#====================================================================================================================
+#====================================================================================================================
 # duplicate
 How would you identify if there are any duplicate rows in the DataFrame? What function would you use?
 If the DataFrame has a column for 'Product_ID', how would you find out if there are any duplicate 'Product_ID' entries?
@@ -271,7 +274,8 @@ If your DataFrame contains columns 'Product_ID', 'Product_Name', and 'Price', ho
 Is it possible to use drop_duplicates to remove duplicates based on multiple columns, say 'Product_ID' and 'Price'? If so, how would you do it?
 How would you use drop_duplicates to keep the last occurrence of each duplicate row based on 'Product_ID' and remove the earlier ones?
 Can you specify whether to keep or drop duplicates in place, without creating a new DataFrame? If so, what parameter would you use?
-
+#====================================================================================================================
+#====================================================================================================================
 # SORT_Questions
 import pandas as pd
 
@@ -307,7 +311,73 @@ How can you sort the DataFrame by the index after you've sorted it by a column?
 
 Can you sort the DataFrame by "Total_Slams" in descending order but display only the top 5 players?
 
+#====================================================================================================================
+#====================================================================================================================
+#isin_Questions
+import pandas as pd
 
+data = {
+    'Store_ID': [101, 102, 103, 104, 105, 106, 107, 108, 109, 110],
+    'Store_Name': ['Walmart', 'Target', 'Costco', 'Aldi', 'Trader Joe\'s', 'Safeway', 'Kroger', 'Walmart', 'Whole Foods', 'Sprouts'],
+    'City': ['Los Angeles', 'San Francisco', 'San Diego', 'San Jose', 'Sacramento', 'Fresno', 'Oakland', 'Los Angeles', 'Santa Clara', 'Pasadena'],
+    'Annual_Revenue_Millions': [450, 320, 480, 190, 240, 260, 210, 400, 310, 150],
+    'Category': ['Supermarket', 'Department', 'Warehouse', 'Supermarket', 'Supermarket', 'Supermarket', 'Supermarket', 'Supermarket', 'Organic', 'Organic']
+}
+
+stores_df = pd.DataFrame(data)
+
+How would you filter the DataFrame to get stores located in either 'Los Angeles' or 'San Diego'?
+
+Can you use isin to find out which stores in the DataFrame have an annual revenue of either 450 or 480 million?
+
+How would you use isin to identify rows where the store name is either 'Walmart' or 'Aldi'?
+
+Imagine you have a list selected_cities = ['Sacramento', 'Oakland']. How would you use the isin method to filter the DataFrame based on this list?
+
+Can you identify which rows have the store category either as 'Organic' or 'Warehouse'?
+
+How would you use the isin method to exclude rows where the store name is 'Trader Joe's'?
+
+If you had a Series s = pd.Series([101, 103, 105]), how would you use isin to filter rows in the DataFrame with matching Store_IDs?
+
+How can you combine isin with the ~ operator to filter out rows where the city is either 'San Francisco' or 'Santa Clara'?
+
+Can you find out which stores are not categorized as 'Supermarket' using the isin method?
+
+Imagine there's an external list of store names for a promotion. How would you use the isin method to filter only the rows of the DataFrame that match the store names in this list?
+
+#as_Type_Questions
+import pandas as pd
+
+data = {
+    'Product_ID': [101, 102, 103, 104, 105],
+    'Product_Name': ['iPhone', 'MacBook Pro', 'iPad', 'Apple Watch', 'AirPods'],
+    'Release_Year': ['2020', '2019', '2018', '2021', '2019'],
+    'Price ($)': [999, 1299, 329, 399, 159],
+    'Units_Sold_Millions': ['75', '20', '40', '25', '30']
+}
+
+apple_df = pd.DataFrame(data)
+
+How would you convert the 'Release_Year' column from string type to integer type?
+
+Can you use astype to change the data type of the 'Price ($)' column to a float?
+
+How can you change the 'Units_Sold_Millions' column from string to integer data type?
+
+If you wanted the 'Product_ID' column to be of string type for joining with another dataset, how would you use astype to achieve this?
+
+Can you transform the 'Units_Sold_Millions' column into a float type and ensure that the column represents the actual number of units (i.e., not in millions) using a single line of code?
+
+How would you convert all string columns in the DataFrame to uppercase while changing their data type to a category?
+
+How would you use astype method to make the 'Product_Name' column a categorical data type?
+
+Imagine you have a mapping dictionary for product names to abbreviations: name_map = {'iPhone':'IP', 'MacBook Pro':'MBP', 'iPad':'IPD', 'Apple Watch':'AW', 'AirPods':'AP'}. How would you apply this mapping after converting the 'Product_Name' column to a category type?
+
+How would you use the astype method to change multiple columns' data types at once? For instance, converting both 'Release_Year' and 'Units_Sold_Millions' to integers.
+
+If you wanted to represent prices in cents rather than dollars and needed the 'Price ($)' column as an integer reflecting this change, how would you use astype along with a transformation?
 
 
 
