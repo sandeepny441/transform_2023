@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Portfolio</title>
+  <!-- Add some styling; you can replace this with your own stylesheet -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #project-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .project-card {
+      width: 30%;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Machine Learning Projects</h1>
+
+  <div id="project-container">
+    <!-- Projects will be appended here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- Your existing HTML content -->
+<div>
+  <h2>Linear Regression for Sales Prediction</h2>
+  <label for="month">Enter the month number:</label>
+  <input type="number" id="month">
+  <button onclick="getPrediction()">Predict</button>
+  <p>Predicted sales: <span id="result"></span></p>
+</div>
+
