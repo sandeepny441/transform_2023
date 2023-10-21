@@ -85,4 +85,4 @@ y_pred = model(X_test)
 y_pred = torch.argmax(y_pred,dim=1)
 
 from sklearn.metrics import accuracy_score
-print(accuracy_score(y_test, y_pred))
+print(accuracy_score(y_testn

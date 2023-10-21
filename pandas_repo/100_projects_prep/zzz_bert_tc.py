@@ -62,4 +62,35 @@ trainer.train()
 results = trainer.evaluate()
 print(results)
 
+from sklearn.datasets import make_moons
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.pipeline import make_pipeline
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Generate a dataset with non-linear decision boundary
+X, y = make_moons(noise=0.3, random_state=0)
+
+# Split the data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Use PolynomialFeatures to transform the dataset
+polynomial_features = PolynomialFeatures(degree=3, include_bias=False)
+
+# Create a logistic regression model
+logreg = LogisticRegression(solver='lbfgs')
+
+# Create a pipeline that first applies polynomial feature transformation, then logistic regression
+pipeline = make_pipeline(polynomial_features, logreg)
+
+# Fit the model
+pipeline.fit(X_train, y_train)
+
+# Predict on the test set
+y_pred = pipeline.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
 
