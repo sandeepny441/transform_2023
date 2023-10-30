@@ -37,13 +37,12 @@ def main():
 
     # Define the prompt for completion
     prompt = (
-        "Basic API Access\n\n"
-        "Query GPT with promt for creating poems on french riverss,"
+       "You're absolutely right, my previous example had a mistake in the matrix dimensions for multiplying a and b^T. Let me walk through a corrected example:"
     )
 
     # Obtain and display the completion
     completion = complete_prompt_with_gpt(prompt, model, tokenizer)
-    print('Resukt================================')
+    print('Result================================')
     print(completion)
 
 if __name__ == "__main__":
